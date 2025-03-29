@@ -1,0 +1,450 @@
+/* Console Pages Specific Styles */
+
+/* Console Hero Section */
+.console-hero {
+    height: 50vh;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.console-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.console-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, var(--background-dark), transparent);
+    z-index: 2;
+}
+
+.console-hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.console-hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.console-hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* PlayStation specific hero backgrounds */
+.ps5-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('game-placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.ps4-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('game-placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.ps3-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('game-placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.ps2-hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('game-placeholder.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Console Info Section */
+.console-info {
+    padding: 60px 0;
+    background-color: var(--background-light);
+}
+
+.console-info-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.console-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.console-image .image-container {
+    width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.ps5-hero + .console-info .console-image .image-container {
+    background-image: url('ps5-console.jpg');
+}
+
+.ps4-hero + .console-info .console-image .image-container {
+    background-image: url('ps4-console.jpg');
+}
+
+.ps3-hero + .console-info .console-image .image-container {
+    background-image: url('ps3-console.jpg');
+}
+
+.ps2-hero + .console-info .console-image .image-container {
+    background-image: url('ps2-console.jpg');
+}
+
+.console-details {
+    flex: 1;
+    min-width: 280px;
+}
+
+.console-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.console-details p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.console-features {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.console-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.console-features li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Games Section */
+.games-section {
+    padding: 60px 0;
+    background-color: #0f0f0f;
+}
+
+.games-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #1a1a1a;
+    color: #cccccc;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.game-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('game-placeholder.jpg');
+}
+
+.game-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.game-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.game-card:hover .game-image img {
+    transform: scale(1.1);
+}
+
+.game-info {
+    padding: 15px;
+}
+
+.game-title {
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.game-genre {
+    color: #ff0000;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.game-details {
+    display: flex;
+    justify-content: space-between;
+    color: #cccccc;
+    font-size: 0.85rem;
+}
+
+.release-year, .rating {
+    display: flex;
+    align-items: center;
+}
+
+.release-year i, .rating i {
+    margin-right: 5px;
+    color: #ff0000;
+}
+
+@media (min-width: 576px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .games-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.cta-content p {
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.cta-content .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .console-hero-title {
+        font-size: 2rem;
+    }
+    
+    .console-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .console-info-content {
+        flex-direction: column;
+    }
+    
+    .console-details h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .console-hero {
+        height: 40vh;
+    }
+    
+    .console-hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .console-hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .console-image .image-container {
+        height: 250px;
+    }
+    
+    .console-details h2 {
+        font-size: 1.6rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .console-hero {
+        height: 60vh;
+    }
+    
+    .console-hero-title {
+        font-size: 3rem;
+    }
+    
+    .console-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .console-image .image-container {
+        height: 350px;
+    }
+    
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Add styles for the game names list */
+.games-list {
+    padding: 20px 0;
+}
+
+.game-names-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.game-names-list li {
+    background-color: #1a1a1a;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid #ff0000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-names-list li:hover {
+    transform: translateX(5px);
+    background-color: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 576px) {
+    .game-names-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .game-names-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .game-names-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+} 

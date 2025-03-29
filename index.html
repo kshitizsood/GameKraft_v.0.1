@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameKraft - Experience the Real Joy of Gaming</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="gamekraft-logo.png" alt="GameKraft Logo" class="logo-img">
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#consoles" class="nav-link">Consoles & Games</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="membership.html" class="nav-link">Membership</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">EXPERIENCE THE REAL JOY OF GAMING</h1>
+                    <p class="hero-subtitle">Premium gaming center featuring PlayStation consoles from PS2 to PS5</p>
+                    <div class="hero-buttons">
+                        <a href="#consoles" class="btn btn-primary">Explore Games <i class="fas fa-gamepad"></i></a>
+                        <a href="pricing.html" class="btn btn-secondary">View Pricing <i class="fas fa-tags"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="console-display">
+                        <span class="console-tag">PS2</span>
+                        <span class="console-tag">PS3</span>
+                        <span class="console-tag">PS4</span>
+                        <span class="console-tag">PS5</span>
+                    </div>
+                    <div class="pricing-preview">
+                        <div class="price-tag">
+                            <span class="price-amount">Rajpura's First Game Centre</span>
+                            <span class="price-period"></span>
+                        </div>
+                        <!-- <div class="price-tag">
+                            <span class="price-amount">₹50</span>
+                            <span class="price-period">60 mins</span>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <center><span>Scroll Down</span></center>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About GameKraft</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>GameKraft is a premium gaming center dedicated to providing the ultimate gaming experience. We offer the latest PlayStation consoles and a vast library of games for players of all ages and skill levels.</p>
+                        <p>Our state-of-the-art facility is designed to immerse you in the gaming world with comfortable seating, high-definition displays, and professional audio systems.</p>
+                        <p>Whether you're a casual gamer looking to have fun with friends or a competitive player aiming to sharpen your skills, GameKraft is your destination for the real joy of gaming.</p>
+                    </div>
+                    <div class="about-image">
+                        <!-- <div class="image-container">
+                            
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consoles Section -->
+        <section id="consoles" class="consoles-section">
+            <div class="container">
+                <h2 class="section-title">Our Consoles & Games</h2>
+                <div class="consoles-grid">
+                    <div class="console-card" data-aos="fade-up">
+                        <div class="console-img">
+                            <img src="ps5.png" alt="PlayStation 5">
+                        </div>
+                        <div class="console-info">
+                            <h3>PlayStation 5</h3>
+                            <p>Experience lightning-fast loading, deeper immersion with the DualSense controller, and a new generation of incredible PlayStation games.</p>
+                            <a href="ps5.html" class="btn">View Games</a>
+                        </div>
+                    </div>
+                    <div class="console-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="console-img">
+                            <img src="ps4.png" alt="PlayStation 4">
+                        </div>
+                        <div class="console-info">
+                            <h3>PlayStation 4</h3>
+                            <p>Enjoy a vast library of hit games with rich, immersive graphics and deeply integrated social capabilities.</p>
+                            <br><br><a href="ps4.html" class="btn">View Games</a>
+                        </div>
+                    </div>
+                    <div class="console-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="console-img">
+                            <img src="pp3.png" alt="PlayStation 3">
+                        </div>
+                        <div class="console-info">
+                            <h3>PlayStation 3</h3>
+                            <p>Discover a library of classic games that defined a generation, featuring groundbreaking titles and innovative gameplay.</p>
+                            <br><a href="ps3.html" class="btn">View Games</a>
+                        </div>
+                    </div>
+                    <div class="console-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="console-img">
+                            <img src="ps2.png" alt="PlayStation 2">
+                        </div>
+                        <div class="console-info">
+                            <h3>PlayStation 2</h3>
+                            <p>Revisit the golden era of gaming with the best-selling console of all time and its legendary game library.</p>
+                           <br><br> <a href="ps2.html" class="btn">View Games</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>J-1/4 First floor, pmn college road, rajpura</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+91 9872846025</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>info@gamekraft.com</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="gamekraft-logo.png" alt="GameKraft Logo" class="footer-logo-img">
+                    <p>Experience the Real Joy of Gaming</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#consoles">Consoles & Games</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-map">
+                <a href="https://www.google.com/maps/dir/30.488425,76.597228/J,+1%2F4,+Gobind+Colony+Patiala+Rd,+Gobind+Colony,+Rajpura,+Punjab+140401/@30.4825996,76.5830987,15z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x390fdd147b9c1d6b:0xef984131677f0591!2m2!1d76.5875823!2d30.4788476!3e0?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-link">
+                    <i class="fas fa-map-marker-alt"></i> Find Us on Google Maps
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GameKraft. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
